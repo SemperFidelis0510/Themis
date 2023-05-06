@@ -22,6 +22,7 @@ from autogpt.workspace import Workspace
 from scripts.install_plugin_deps import install_plugin_dependencies
 
 
+
 def run_auto_gpt(
     continuous: bool,
     continuous_limit: int,

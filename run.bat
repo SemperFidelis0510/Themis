@@ -1,5 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
+cd /d "D:\Themis\Auto-GPT"
+
 
 :FindPythonCommand
 for %%A in (python python3) do (
@@ -20,5 +22,7 @@ if errorlevel 1 (
     echo Installing missing packages...
     %PYTHON_CMD% -m pip install -r requirements.txt
 )
-%PYTHON_CMD% -m autogpt %*
+
+%PYTHON_CMD% -m autogpt --speak -m local --allow-downloads --skip-news --gpt3only
 pause
+
